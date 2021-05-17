@@ -15,7 +15,7 @@ class Queue
     public function push($data)
     {
         if (count($this->stack) < $this->limit) {
-            array_unshift($this->stack, $data);
+            array_push($this->stack, $data);
         } else {
             throw new RunTimeException('Stack is full!');
         }
